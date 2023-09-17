@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  .grid-container {
+    display: grid;
+   
+    grid-template-columns: repeat(3, 1fr); /* 3 columns with equal width */
+    gap: 10px; /* Gap between grid items */
+    align-items:center; /* Align items vertically in the center */
+    justify-content: space-between;
+  }
+
+
+  .grid-item {
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align:center;
+    image-align:margin-top;
+  }
+  .grid-item img {
+    max-width: 200%;
+    /*image align:center;*/
+    height: auto;
+    width: 300px; /* Adjust the width as needed */
+    height: 200px; /* Adjust the height as needed */
+  }
+  
+  .image-caption {
+    position:absolute; /* Position the caption absolutely */
+    bottom: 0; /* Align to the bottom */
+    left:0;
+    width: 100%; /* Full width of the grid item */
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    color:blue; /* Text color */
+    padding: 5px; /* Padding for the caption */
+    box-sizing: border-box; /* Include padding in width calculation */
+  }
+  .mutual-friends{
+    display: flex;
+    align-items: center;
+  }
+  .mutual-friends-icon::before{
+    content:"\f004" ;
+    margin-right: 5px;
+    font-size: 16px;
+  }
+  .button {
+    display: inline-block;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+</style>
+<title>Grid Example</title>
+<body>
+    <div class="grid-container">
+        <div class="grid-item"><img src="C:\Users\mulge\Pictures\Screenshots\dog-2563759_640.jpg"><br><b>Olive</b><br>
+        <div class="mutual-friends">
+          <span class=" mutual-friends-icon"></span><span>2 mutual friends</span>  </div><br>
+          <button class="button">Add Friends</button></div>
+      
+        <div class="grid-item"><img src="C:\Users\mulge\Pictures\Screenshots\dog.avif"><br><b>Mimi</b><div class="mutual-friends"><span class=" mutual-friends-icon"></span><span>3 mutual friends</span></div><br>
+            <button class="button">Add Friends</button></div>
+        <div class="grid-item"><img src="C:\Users\mulge\Pictures\Screenshots\cat.jpg"><br><b>Rex</b><div class="mutual-friends"><span class=" mutual-friends-icon"></span><span>4 mutual friends</span></div><br>
+            <button class="button">Add Friends</button></div>
+          </div>
+</body>
+</html>
